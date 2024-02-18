@@ -18,7 +18,7 @@ As such, this app showcases my knowledge and usage of Python:
 - String Manipulation
 
 
-## Future Features
+## Additional Features
 - [ ] Allow users to change the quantity of each item.
 - [ ] Add functionality to your programme that will offer users personalised suggestions, based on products in their cart.
 - [x] ~~Create a list of products that will display to the user and users will have to choose items from this list only.~~ (29/11/2023)
