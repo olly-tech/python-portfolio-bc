@@ -3,7 +3,7 @@ This repo hosts all Python portfolio projects demonstrating Skills Bootcamp lear
 
 ## Portfolio Projects
 - [x] Paws n Cart
-- [ ] Paws n Cart II
+- [x] Paws n Cart II
 - [ ] Career Crafter
 - [ ] Simple Scribes
 - [ ] Log Management Tool
