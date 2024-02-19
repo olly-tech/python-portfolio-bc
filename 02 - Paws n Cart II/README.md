@@ -19,7 +19,10 @@ Initially struggled to match the user input with the array as the case sensitivi
 
 Fixed problem where appending quantity of items in cart created list in a list, by changing `.append` to `.extend`
 
+A big challenge that was overcome in this upgrade was figuring out how to allow users to remove multiple quantities of an item. 
+
+
 ## Next Steps and Future Features
-- [ ] Add item prices and calculations for checkout.
+- [x] ~~Add item prices and calculations for checkout.~~ (13/12/2023)
+- [x] ~~Fix cart output to better align as currently catnip's quantity does not align with the other items'.~~ (13/12/2023)
 - [ ] Build upon cart functionality to enable users to modify the quantity of items in their cart.
-- [ ] Fix cart output to better align as currently catnip's quantity does not align with the other items'. 
