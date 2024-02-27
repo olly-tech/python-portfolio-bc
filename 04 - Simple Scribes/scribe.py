@@ -106,6 +106,7 @@ def main_menu():
 2 - text formatting (bold, underline, italicised, capitalize)
 3 - background and text colour
 """))
+
             if edit_menu == 1:
                 user_text = replace_edit(user_text)
             elif edit_menu == 2:
