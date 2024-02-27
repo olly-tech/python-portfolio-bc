@@ -102,8 +102,8 @@ Select a text formatting option?
     1 - Bold
     2 - Italics
     3 - Underline
-    4 - Capitalise all
-    5 - Capitalise first letter
+    4 - Capitalise all letters
+    5 - Capitalise first letter of each word
     6 - Convert to lowercase
 """))
             if format_menu == 1:
@@ -113,7 +113,7 @@ Select a text formatting option?
             elif format_menu == 3:
                 user_text = user_text.replace(find, f"{UNDERLINE}{find}{OFF}")
             elif format_menu == 4:
-                user_text = user_text.replace(find, find.capitalize())
+                user_text = user_text.replace(find, find.upper())
             elif format_menu == 5:
                 user_text = user_text.replace(find, find.title())
             elif format_menu == 6:
