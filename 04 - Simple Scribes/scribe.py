@@ -12,6 +12,7 @@ UNDERLINE = '\033[4m'
 FG_RED = '\u001b[31m'
 FG_GREEN = '\033[0;32m'
 FG_BLACK = '\033[0;30m'
+
 # divider line
 os_width = os.get_terminal_size().columns #sets to terminal width
 line = "-" * os_width
@@ -107,12 +108,29 @@ def change_txtcol(user_text):
 2 - change text to green
 3 - change text to black
 """))
-        if colour_menu == 1:
-            user_text = user_text.replace(find, f"{FG_RED}{find}{OFF}")
-        elif colour_menu == 2:
-            user_text = user_text.replace(find, f"{FG_GREEN}{find}{OFF}")
-        elif colour_menu == 3:
-            user_text = user_text.replace(find, f"{FG_BLACK}{find}{OFF}")
+        replace_quantity = int(input("""
+Please select an option:
+1 - Replace only the first instance.
+2 - Replace ALL instances.
+"""))
+        if replace_quantity == 1:
+            if colour_menu == 1:
+                user_text = user_text.replace(find, f"{FG_RED}{find}{OFF}", 1)
+            elif colour_menu == 2:
+                user_text = user_text.replace(find, f"{FG_GREEN}{find}{OFF}", 1)
+            elif colour_menu == 3:
+                user_text = user_text.replace(find, f"{FG_BLACK}{find}{OFF}", 1)
+            else:
+                raise ValueError("Option not recognized.")
+        elif replace_quantity == 2: # all instances replaced
+            if colour_menu == 1:
+                user_text = user_text.replace(find, f"{FG_RED}{find}{OFF}")
+            elif colour_menu == 2:
+                user_text = user_text.replace(find, f"{FG_GREEN}{find}{OFF}")
+            elif colour_menu == 3:
+                user_text = user_text.replace(find, f"{FG_BLACK}{find}{OFF}")
+            else:
+                raise ValueError("Option not recognized.")
         else:
             raise ValueError("Option not recognized.")
     except ValueError as ve:
