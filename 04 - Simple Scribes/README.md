@@ -16,8 +16,11 @@ As such, this program showcases my knowledge and usage of Python:
 - Lists, List Methods and Nested Lists
 - Dictionaries
 
-
+### Ongoing Steps
+- [ ] Add ability to change background colour
+- [ ] Current program's functionality is centred in text formatting. Missing application form focus.
 
 ## Additional Features and Future Steps
 - [ ] Store data in a text file.
 - [ ] Improve functionality of find and replace tool for if user is attempting to replace only the nth instance of their 'find' search.
+- [ ] Add ability to change background colour
