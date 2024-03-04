@@ -8,6 +8,10 @@ BOLD = '\033[1m'
 ITALIC = '\033[3m'
 UNDERLINE = '\033[4m'
 
+## colour attributes
+FG_RED = '\u001b[31m'
+FG_GREEN = '\033[0;32m'
+FG_BLACK = '\033[0;30m'
 # divider line
 os_width = os.get_terminal_size().columns #sets to terminal width
 line = "-" * os_width
@@ -94,6 +98,27 @@ def text_formatting(user_text):
     return user_text
 
 
+## change text colour
+def change_txtcol(user_text):
+    find = find_text(user_text)
+    try:
+        colour_menu = int(input("""
+1 - change text to red
+2 - change text to green
+3 - change text to black
+"""))
+        if colour_menu == 1:
+            user_text = user_text.replace(find, f"{FG_RED}{find}{OFF}")
+        elif colour_menu == 2:
+            user_text = user_text.replace(find, f"{FG_GREEN}{find}{OFF}")
+        elif colour_menu == 3:
+            user_text = user_text.replace(find, f"{FG_BLACK}{find}{OFF}")
+        else:
+            raise ValueError("Option not recognized.")
+    except ValueError as ve:
+        print(f"ERROR: {ve} Please try again.")
+    return user_text
+
 ## main menu and running function
 def main_menu():
     welcome()
@@ -104,7 +129,7 @@ def main_menu():
             edit_menu = int(input("""
 1 - find and replace
 2 - text formatting (bold, underline, italicised, capitalize)
-3 - background and text colour
+3 - change text colour
 """))
 
             if edit_menu == 1:
@@ -112,7 +137,7 @@ def main_menu():
             elif edit_menu == 2:
                 user_text = text_formatting(user_text)
             elif edit_menu == 3:
-                pass # feature to be implemented
+                user_text = change_txtcol(user_text)
             else:
                 raise ValueError("Option not recognized.")
         except ValueError as ve:
